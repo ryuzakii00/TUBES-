@@ -1,8 +1,19 @@
+
 public class utama {
+
     public static void main(String[] args) {
-    Ruangkelas x = new Ruangkelas();
-    x.identitas();
-    x.input();
-    x.output();
-}
+        Ruang x = new Ruang();
+
+        x.identitas();
+
+        x.input();
+        x.analisis();
+        x.output();
+
+        RuangDosen y = new RuangDosen();
+        y.ident();
+        y.input();
+        y.analisis();
+        y.output();
+    }
 }

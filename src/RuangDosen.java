@@ -1,27 +1,17 @@
 
 import java.util.Scanner;
 
-// Input, hitung, output di pisah
-// untuk method analisis diganti dengan String
-// Segera konek github.
-
-public class Ruangkelas {
-
-    int luas;
-    int rasio;
-    Ruang a = new Ruang();
-    Scanner sc = new Scanner(System.in);
-
-    public void identitas() {
-
+public class RuangDosen extends Ruang {
+    Ruang x = new Ruang();
+    Scanner s = new Scanner(System.in);
+    
+    void ident(){
         System.out.println("Masukan Nama Ruang : ");
         a.setRuang(sc.nextLine());
         System.out.println("Masukan Lokasi Ruang : ");
         a.setLokasi(sc.nextLine());
-        System.out.println("");//untuk inputan fakultas dan prodi
-         
     }
-
+    @Override
     String input() {
         //ukuran dan bentuk ruang
         System.out.println("Masukan Panjang Ruang : ");
@@ -131,20 +121,23 @@ public class Ruangkelas {
         return null;
     }
     
+    @Override
     int hitungrasio(){
-         rasio = luas / a.getJml_kursi();
+         super.rasio = super.luas / a.getJml_kursi();
          return 0;
     }
     
+    @Override
     int hitungluas(){
-        luas = a.getPanjang_ruang() * a.getLebar_ruang();
+        super.luas = a.getPanjang_ruang() * a.getLebar_ruang();
         return 0;
     }
 
-    String output() {
+    @Override
+    String analisis() {
         //ukuran dan bentuk ruang
-        System.out.println("Luas = " + luas);
-        if (a.getPanjang_ruang() != luas) {
+        System.out.println("Luas = " + super.luas);
+        if (a.getPanjang_ruang() != super.luas) {
             System.out.println("Ruang Kelas Adalah Persegi Panjang\n");
             System.out.println("Ruang Kelas Sesuai !");
         } else {
@@ -153,8 +146,8 @@ public class Ruangkelas {
         }
 
         // rasio
-        System.out.println("Rasio :: " + rasio);
-        if (rasio >= 0.5) {
+        System.out.println("Rasio :: " + super.rasio);
+        if (super.rasio >= 0.5) {
             System.out.println("SESUAI ");
         } else {
             System.out.println("tidak sesuai");
@@ -369,4 +362,62 @@ public class Ruangkelas {
         }
         return null;
     }
+    
+    @Override
+    String output(){
+        System.out.println("Nama ruang : "+a.getRuang());
+        System.out.println("Lokasi ruang : "+a.getLokasi());
+        //list inputan kondisi ruang kelas
+        System.out.println("Panjang ruang : "+a.getPanjang_ruang());
+        System.out.println("Lebar ruang : "+a.getLebar_ruang());
+        System.out.println("Jumlah kursi : "+a.getJml_kursi());
+        System.out.println("Jumlah pintu : "+a.getJml_pintu());
+        System.out.println("Jumlah Jendela : "+a.getJml_jendela());
+        //list inputan lingkungan ruang kelas
+        System.out.println("Kondisi lantai : "+a.getLantai());
+        System.out.println("Kondisi dinding : "+a.getDinding());
+        System.out.println("Kondisi atap :  "+a.getAtap());
+        System.out.println("Kondisi pintu : "+a.getPintu());
+        System.out.println("Kondisi jendela : "+a.getJendela());
+        //list inputan kebersihan lingkungan kelas
+        System.out.println("Kondisi sirkulasi udara : "+a.getUdara());
+        System.out.println("Kondisi pencahayaan : "+a.getCahaya());
+        System.out.println("Kondisi kelembapan(%) : "+a.getLembab());
+        System.out.println("Kondisi suhu (celcius) : "+a.getSuhu());
+        //list inputan kenyamanan ruang kelas
+        System.out.println("Kondisi kebisingan : "+a.getBising());
+        System.out.println("Kondisi bau : "+a.getBau());
+        System.out.println("Kondisi kebocoran : "+a.getBocor());
+        System.out.println("Kondisi kerusakan : "+a.getRusak());
+        System.out.println("Kondisi keausan : "+a.getAus());
+        //list inputan keamanan ruang kelas 
+        System.out.println("Kondisi kekokohan : "+a.getKokoh());
+        System.out.println("Kondisi kunci jendela : "+a.getKnc_jendela());
+        System.out.println("Kondisi kunci pintu : "+a.getKnc_pintu());
+        System.out.println("Kondisi bahaya : "+a.getBahaya());
+        //List Inputan
+        System.out.println("Jumlah Steker : "+a.getJml_stek());
+        System.out.println("Kondisi Steker : "+a.getKond_stek());
+        System.out.println("Posisi Steker : "+a.getPos_stek());
+        System.out.println("Jumlah Kabel LCD : "+a.getJml_klcd());
+        System.out.println("Kondisi Kabel LCD : "+a.getKond_klcd());
+        System.out.println("Posisi Kabel LCD : "+a.getPos_klcd());
+        System.out.println("Jumlah Lampu : "+a.getJml_lamp());
+        System.out.println("Kondisi Lampu : "+a.getKond_lamp());
+        System.out.println("Posisi Lampu : "+a.getPos_lamp());
+        System.out.println("Jumlah Kipas : "+a.getJml_kipas());
+        System.out.println("Kondisi Kipas : "+a.getKond_kipas());
+        System.out.println("Posisi Kipas : "+a.getPos_kipas());
+        System.out.println("Jumlah AC : "+a.getAc());
+        System.out.println("Kondisi AC : "+a.getKond_ac());
+        System.out.println("Posisi AC : "+a.getPos_ac());
+        System.out.println("Nama SSID : "+a.getSSID());
+        System.out.println("Jumlah Bandwidth : "+a.getBw());
+        System.out.println("Jumlah CCTV : "+a.getCctv());
+        System.out.println("Kondisi CCTV : "+a.getKond_cctv());
+        System.out.println("Posisi CCTV : "+a.getPos_cctv());
+        return null;
+    }
+    
+    
 }

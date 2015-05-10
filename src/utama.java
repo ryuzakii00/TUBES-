@@ -3,17 +3,13 @@ public class utama {
 
     public static void main(String[] args) {
         Ruang x = new Ruang();
-
-        x.identitas();
-
         x.input();
-        x.analisis();
-        x.output();
-
-        RuangDosen y = new RuangDosen();
-        y.ident();
+        x.output1(null);
+    
+        RuangDosen y =  new RuangDosen();
         y.input();
-        y.analisis();
-        y.output();
+        y.output2(null, null, null);
+        y.output2(null, null, null, null);
+        
     }
 }

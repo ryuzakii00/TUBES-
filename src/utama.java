@@ -23,6 +23,6 @@ public class utama {
     x.analisisjendela();
     x.analisispintu();
     x.analisiskeamanan();
-    x.listinputan();
+    //x.listinputan();
 }
 }

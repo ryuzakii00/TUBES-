@@ -1,9 +1,9 @@
 
+// Author Wisnu Edo S
 import java.util.Scanner;
 
-public class RuangDosen extends Ruang {
+public  class RuangDosen extends Ruang implements View  {
 
-    Ruang x = new Ruang();
     Scanner s = new Scanner(System.in);
     int y;
 
@@ -14,8 +14,10 @@ public class RuangDosen extends Ruang {
         a.setLokasi(sc.nextLine());
     }
 
+    
+
     @Override
-    String input() {
+    public String input() {
         
         //ukuran dan bentuk ruang
         System.out.println("Masukan Panjang Ruang : ");
@@ -129,13 +131,13 @@ public class RuangDosen extends Ruang {
     
 
     @Override
-    int hitungrasio() {
+    public int hitungrasio() {
         super.rasio = super.luas / a.getJml_kursi();
         return 0;
     }
 
     @Override
-    int hitungluas() {
+    public int hitungluas() {
         super.luas = a.getPanjang_ruang() * a.getLebar_ruang();
         return 0;
     }
@@ -480,8 +482,8 @@ public class RuangDosen extends Ruang {
     
     
 
-    
-    void output2(String identitas, String kondisi, String Lingkungan ) {
+   
+    public void output2(String identitas, String kondisi, String Lingkungan ) {
         //list inputan identitas ruang
         System.out.println("Nama ruang : " + a.getRuang());
         System.out.println("Lokasi ruang : " + a.getLokasi());
@@ -500,7 +502,8 @@ public class RuangDosen extends Ruang {
     
     }
     
-    void output2(String kebersihan, String kenyamanan, String keamanan, String sarana){
+  
+    public void output2(String kebersihan, String kenyamanan, String keamanan, String sarana){
         //list inputan kebersihan lingkungan kelas
         System.out.println("Kondisi sirkulasi udara : " + a.getUdara());
         System.out.println("Kondisi pencahayaan : " + a.getCahaya());
@@ -540,5 +543,9 @@ public class RuangDosen extends Ruang {
         System.out.println("Posisi CCTV : " + a.getPos_cctv());
         
     }
+
+    
+
+   
 
 }

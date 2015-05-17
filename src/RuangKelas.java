@@ -1,5 +1,5 @@
 
-// Author Yusuf Yoga Adiutamass
+// Author Yusuf Yoga Adiutama
 import java.util.Scanner;
 
 

@@ -2,7 +2,7 @@
 public class utama {
 
     public static void main(String[] args) {
-        Ruang x = new Ruang();
+        RuangKelas x = new RuangKelas();
         x.input();
         x.output1(null);
     

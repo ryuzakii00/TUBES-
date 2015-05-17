@@ -1,4 +1,4 @@
-// @author Bagus Alfiansyah
+// @author Bagus Alfiansyah (149)
 public interface View {
     
     public int hitungrasio();

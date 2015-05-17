@@ -1,5 +1,5 @@
 
-// @author Wisnu Edo S. 
+// @author Wisnu Edo S. (169)
 import java.util.Scanner;
 
 // Input, hitung, output di pisah

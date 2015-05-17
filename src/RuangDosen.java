@@ -1,5 +1,5 @@
 
-// Author Wisnu Edo S
+// @author Wisnu Edo S. (169)
 import java.util.Scanner;
 
 public  class RuangDosen extends Ruang implements View  {

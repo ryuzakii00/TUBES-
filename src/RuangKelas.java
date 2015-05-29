@@ -11,28 +11,31 @@ public class RuangKelas extends Ruang {
     public void identitas() {
 
         System.out.println("Masukan Nama Ruang : ");
-        a.setRuang(sc.nextLine());
+        a.setRuang(sc.next());
         System.out.println("Masukan Lokasi Ruang : ");
-        a.setLokasi(sc.nextLine());
+        a.setLokasi(sc.next());
         System.out.println("");//untuk inputan fakultas dan prodi
 
     }
 
     @Override
-    String input() {
-        //ukuran dan bentuk ruang
+    void kondisi(){
         System.out.println("Masukan Panjang Ruang : ");
         a.setPanjang_ruang(sc.nextInt());
         System.out.println("Masukan Lebar Ruang : ");
         a.setLebar_ruang(sc.nextInt());
         hitungluas();
-
-        //rasio
         System.out.println("Masukan Jumlah Kursi :: ");
         a.setJml_kursi(sc.nextInt());
         hitungrasio();
-
-        //sarana
+        System.out.println("Masukan Jumlah pintu :: ");
+        a.setJml_pintu(sc.nextInt());
+        System.out.println("Masukan Jumlah Jendela :: ");
+        a.setJml_jendela(sc.nextInt());
+    }
+    
+    @Override
+    void sarana(){
         System.out.println("Masukkan Jumlah Stopkontak/Steker : ");
         a.setJml_stek(sc.nextInt());
         System.out.println("Masukkan Kondisi Stopkontak/Steker : ");
@@ -73,13 +76,10 @@ public class RuangKelas extends Ruang {
         a.setKond_cctv(sc.nextLine());
         System.out.println("Masukkan Posisi CCTV : ");
         a.setPos_cctv(sc.nextLine());
+    }
 
-        //analisis pintu dan jendela
-        System.out.println("Masukan Jumlah pintu :: ");
-        a.setJml_pintu(sc.nextInt());
-        System.out.println("Masukan Jumlah Jendela :: ");
-        a.setJml_jendela(sc.nextInt());
-
+    @Override
+    void kebersihan(){
         System.out.println("Masukkan kondisi sirkulasi udara (lancar/tidak) : ");
         a.setUdara(sc.nextLine());
         System.out.println("Masukkan nilai pencahayaan : ");
@@ -88,8 +88,8 @@ public class RuangKelas extends Ruang {
         a.setLembab(sc.nextInt());
         System.out.println("Masukkan nilai suhu (celcius) : ");
         a.setSuhu(sc.nextInt());
-
-        //kenyamanan
+    }
+    void kenyamanan(){
         System.out.println("Masukkan kondisi kebisingan (bising/tidak) : ");
         a.setBising(sc.nextLine());
         System.out.println("Masukkan kondisi bau (bau/tidak) : ");
@@ -100,8 +100,10 @@ public class RuangKelas extends Ruang {
         a.setRusak(sc.nextLine());
         System.out.println("Masukkan kondisi keausan(aus/tidak) : ");
         a.setAus(sc.nextLine());
-
-        //Lingkungan
+    }
+    
+    @Override
+    void Lingkungan(){
         System.out.println("Masukkan kondisi lantai : ");
         a.setLantai(sc.nextLine());
         System.out.println("Masukkan kondisi dinding : ");
@@ -112,8 +114,10 @@ public class RuangKelas extends Ruang {
         a.setPintu(sc.nextLine());
         System.out.println("Masukkan kondisi jendela : ");
         a.setJendela(sc.nextLine());
-
-        // keamanan
+    }
+    
+    @Override
+    void keamanan(){
         System.out.println("Apakah Kokoh ?? (Y/N) ");
         a.setKokoh(sc.nextLine());
         a.setKokoh(sc.nextLine());
@@ -123,7 +127,6 @@ public class RuangKelas extends Ruang {
         a.setKnc_jendela(sc.nextLine());
         System.out.println("Bayaha apa enggak yang ? (Y/N)");
         a.setBahaya(sc.nextLine());
-        return null;
     }
 
     @Override

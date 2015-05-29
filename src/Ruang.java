@@ -14,7 +14,13 @@ public abstract class Ruang  implements View {
 
     public void identitas(){}
 
-    abstract String input();
+    abstract void kondisi();
+    abstract void sarana();
+    abstract void kebersihan();
+    abstract void kenyamanan();
+    abstract void Lingkungan();
+    abstract void keamanan();
+                                    
   
 
     abstract String analisisruangkelas();
